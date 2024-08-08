@@ -6,16 +6,21 @@ interface ReplyProps {
     username: string;
     replyTitle: string;
     likes: number;
-    replies: ReplyProps[];
+    replies: ({
+        username: string;
+        ImagePath: string;
+        replyTitle: string;
+        likes: number;
+      } | undefined)[];
 }
 export type { ReplyProps };
 
 interface CommentProps {
-    ImagePath: string;
-    username: string;
-    commentTitle: string;
-    likes: number;
-    replies: ReplyProps[];
+    ImagePath?: string;
+    username?: string;
+    commentTitle?: string;
+    likes?: number;
+
 }
 
 export type { CommentProps };
